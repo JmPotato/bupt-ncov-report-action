@@ -3,7 +3,7 @@ name: Automatically submit the 2019-nCoV report sheet of BUPT
 on:
   schedule:
     - cron: "0/10 0 * * *"
-  push:
+  workflow_dispatch:
 
 jobs:
   checker:
@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: "12.x"
       - name: Cache NPM dependencies
         uses: actions/cache@v1
         with:
